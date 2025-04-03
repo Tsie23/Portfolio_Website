@@ -1,0 +1,247 @@
+/* Font Import */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Universal Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline-style: none;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* HTML and Body Styles */
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    background-color: black;
+    color: white;
+}
+
+/* Header Section */
+header {
+    margin-top: 5px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 9%;
+    background-color: transparent; 
+    filter: drop-shadow(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 3rem;
+    color: #fc3f06;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+nav a {
+    font-size: 1.8rem;
+    color: white;
+    font-weight: 500;
+    margin-left: 4rem;
+    transition: 0.3s ease-in-out;
+    border-bottom: 3px solid transparent;
+}
+
+nav a:hover,
+nav a.active {
+    color: #fc3f06;
+    border-bottom: 3px solid #fc3f06;
+}
+
+/* Default Navigation Styles */
+nav {
+    display: flex;
+    gap: 2rem;
+}
+
+/* Responsive Navigation */
+@media(max-width:995px) {
+    nav {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 100%;
+        background-color: #202020;
+        border-top: 3px solid #fc3f06;
+        padding: 2rem 0;
+    }
+
+    nav.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+        background: none;
+        border: none;
+        font-size: 2rem;
+        color: white;
+        cursor: pointer;
+    }
+}
+
+/* Hide Hamburger Menu on Larger Screens */
+.menu-toggle {
+    display: none;
+}
+
+/* Section Styles */
+section {
+    min-height: 100vh;
+    padding: 5rem 9% 5rem;
+}
+
+section h2 {
+    font-size: 3.2rem;
+    color: #fc3f06;
+    margin-bottom: 1.5rem;
+}
+
+section p, section ul {
+    font-size: 1.6rem;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+
+ul {
+    list-style-type: circle;
+    padding-left: 2rem;
+}
+
+/* Home Section */
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8rem;
+    background-color: black;
+}
+
+.home-content h1 {
+    font-size: 6rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+span {
+    color: #fc3f06;
+}
+
+.home-content h3 {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.home-img {
+    border-radius: 50%;
+}
+
+.home-img img {
+    position: relative;
+    width: 32vw;
+    border-radius: 50%;
+    box-shadow: 0 0 25px solid #fc3f06;
+    cursor: pointer;
+    transition: 0.2s linear;
+}
+
+.home-img img:hover {
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+/* Social Icons */
+.social-icons a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background-color: transparent;
+    border: 0.2rem solid #fc3f06;
+    font-size: 2rem; 
+    margin-right: 2rem 1.5rem 3rem 1.5rem;
+    transition: 0.3s ease;
+    color: white;
+}
+
+.social-icons a:hover {
+    background-color: #fc3f06;
+    color: black;
+    transform: scale(1.3) translateY(-5px);
+    box-shadow: 0 0 25px solid #fc3f06;
+}
+
+/* Buttons */
+.btn, form button {
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background-color: black;
+    color: #fc3f06;
+    border-radius: 4rem;
+    border: 2px solid #fc3f06;
+    font-size: 1.6rem;
+    font-weight: 600;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.btn:hover, form button:hover {
+    background-color: #fc3f06;
+    color: black;
+    transform: scale(1.05);
+}
+
+/* Forms */
+form input, form textarea {
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border: 2px solid #fc3f06;
+    border-radius: 0.5rem;
+}
+
+/* Responsive Home Section */
+@media(max-width:995px) {
+    .home {
+        flex-direction: column;
+        margin: 5rem 4rem;
+    }
+
+    .home-content h1 {
+        font-size: 5rem;
+    }
+
+    .home-content h3 {
+        font-size: 2.5rem;
+    }
+
+    .home-img img {
+        width: 70vw;
+        margin-top: 4rem;
+    }
+}
